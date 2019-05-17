@@ -1,11 +1,9 @@
 <?php
-    error_reporting(E_ALL);
     include 'config.php';
     include 'connect.php';
     include 'functions.php';
     include 'doc-head.php';
 ?>
-
 
 <body>
 
@@ -20,11 +18,11 @@ $i = 0;
 foreach ($candidates as $candidate) : 
     $voteTally[$i]['candidate'] = $candidate;
     $voteTally[$i]['count'] = 0;
-        foreach ($results as $item) :
-            if ($item['vote'] == $candidate) :
-                $voteTally[$i]['count'] ++;
-            endif;
-        endforeach;
+    foreach ($results as $item) :
+        if ($item['vote'] == $candidate) :
+            $voteTally[$i]['count'] ++;
+        endif;
+    endforeach;
     $i++;
 endforeach;
 

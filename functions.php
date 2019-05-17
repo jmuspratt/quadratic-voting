@@ -17,10 +17,8 @@ function getCandidates() {
     'ORourke',
     'Sanders',
     'Warren',
-];
-
-return $candidates;
-
+  ];
+  return $candidates;
 }
 
 function addVoteRecord($mysqli, $table, $voter, $vote) {
@@ -34,8 +32,6 @@ function results($mysqli, $table) {
   $sql = "SELECT * FROM $table LIMIT 100";
   $stmt = $mysqli->prepare($sql);
   $stmt->execute();
-  // $results = $stmt->get_result();
-  // Extract result set and loop rows
   $output = [];
   $result = $stmt->get_result();
   while ($data = $result->fetch_assoc()) {

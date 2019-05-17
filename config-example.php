@@ -1,7 +1,5 @@
 <?php
 
-error_reporting(E_ALL);
-
 $domain = $_SERVER['HTTP_HOST'];
 
 $root = "";

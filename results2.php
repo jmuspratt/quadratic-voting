@@ -15,13 +15,9 @@ $results = results($mysqli, 'quadratic');
 
 $voteTally = [];
 $i = 0;
-
 foreach ($candidates as $candidate) :
-
     $voteTally[$i]['candidate'] = $candidate;
     $voteTally[$i]['count'] = 0;
-
-    // get all the votes for that candidate
     foreach ($results as $item) :
         parse_str($item['vote'], $voteArray);
         $voteTally[$i]['count'] += $voteArray[$candidate];
