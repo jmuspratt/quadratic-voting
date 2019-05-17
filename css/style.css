@@ -1,0 +1,50 @@
+
+body {
+    font: 18px / 1.5 courier;
+    background: black;
+    color: #fff;
+    padding: 10px;
+}
+
+h1 {
+    font-weight: normal;
+    font-size: 60px;
+    font: bold 60px /1 arial; 
+}
+.target-tokens {
+    color: gray;
+}
+
+input[type=text] {
+    background: white;
+    border: 0;
+    appearance: none;
+    padding: 10px 12px;
+    margin-bottom: 20px;
+}
+
+.target {
+    display: block;
+  }
+
+  .target span {
+      display: inline-block;
+  }
+
+  .btn {
+    appearance: none;
+    border: 0;
+    border-radius: 3px;
+    display: inline-block;
+    background: blue;
+    font-weight: bold;
+    color: white;
+    height: 24px;
+    width: 30px;
+    padding: 2px;
+    margin: 0 2px 0 0;
+    text-align: center;
+  }
+  .btn--minus {
+
+  }
