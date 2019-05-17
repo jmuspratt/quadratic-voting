@@ -13,7 +13,7 @@
 <?php
 
 $candidates = getCandidates();
-$results = results1($mysqli);
+$results = results($mysqli, '1p1v');
 
 $voteTally = [];
 $i = 0;

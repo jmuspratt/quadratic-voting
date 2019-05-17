@@ -30,8 +30,8 @@ function addVoteRecord($mysqli, $table, $voter, $vote) {
   $stmt->execute();
 }
 
-function results1($mysqli) {
-  $sql = "SELECT * FROM 1p1v LIMIT 100";
+function results($mysqli, $table) {
+  $sql = "SELECT * FROM $table LIMIT 100";
   $stmt = $mysqli->prepare($sql);
   $stmt->execute();
   // $results = $stmt->get_result();
@@ -44,20 +44,5 @@ function results1($mysqli) {
   return $output;
   }
 
-
-  function results2($mysqli) {
-    $sql = "SELECT * FROM quadratic LIMIT 100";
-    $stmt = $mysqli->prepare($sql);
-    $stmt->execute();
-    // $results = $stmt->get_result();
-    // Extract result set and loop rows
-    $output = [];
-    $result = $stmt->get_result();
-    while ($data = $result->fetch_assoc()) {
-        $output[] = $data;
-    }
-    return $output;
-    }
-  
 
 ?>
